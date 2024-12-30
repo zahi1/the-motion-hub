@@ -1,6 +1,6 @@
 # The Motion Hub
 
-Welcome to **The Motion Hub**! This is a video-sharing app where users can sign up, log in, and share their creativity with others. Below is a quick overview of the features included in this project.
+Welcome to **The Motion Hub**! This is a dancing app where users can sign up, log in, and share their creativity with others. Below is a quick overview of the features included in this project.
 
 ---
 
@@ -55,6 +55,13 @@ Users can:
 2. **Explore videos** on the home page.
 3. **Upload your own videos** through the upload page.
 4. **Manage your profile** and enjoy all the features The Motion Hub has to offer!
+
+---
+Video Showcasing the app:
+
+https://github.com/user-attachments/assets/79283807-c39f-4a5a-967b-ea20b40e8f6d
+
+
 
 ---
 
