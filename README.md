@@ -1,39 +1,61 @@
+# The Motion Hub
 
-The Motion Hub
-Welcome to The Motion Hub! This is a video-sharing app where users can sign up, log in, and share their creativity with others. Below is a quick overview of the features included in this project.
+Welcome to **The Motion Hub**! This is a video-sharing app where users can sign up, log in, and share their creativity with others. Below is a quick overview of the features included in this project.
 
-Features
-1. Welcome Page
-When users open the app, they are greeted with a welcome page.
-Users can log in or sign up to access the app.
-During sign up, we added some important validations:
-Age restriction: Users must be 13 years or older to sign up.
-Email validation: Ensures the email entered is in the correct format.
-Input checks: Makes sure all required fields are filled out properly.
-2. Home
-The home page allows users to scroll through videos uploaded by other users.
-Users can like, comment, and share videos directly from the feed.
-3. Upload
-On the upload page, users can select a video from their gallery to upload.
-The trimming feature is currently being worked on to allow users to edit their videos before uploading.
+---
+
+## Features
+
+### **Welcome Page**
+When users open the app, they are greeted with a **welcome page**. Here, users can either **log in** or **sign up** to access the app. During the sign-up process, several validations ensure proper user input:
+- **Age Restriction**: Users must be **13 years or older** to sign up.
+- **Email Validation**: Ensures the email entered is in the correct format.
+- **Input Checks**: Verifies that all required fields are filled out properly.
+
+---
+
+### **Home**
+The **Home Page** allows users to:
+- **Scroll through videos** uploaded by others.
+- **Like**, **comment**, and **share** videos directly from the feed.
+
+---
+
+### **Upload**
+The **Upload Page** enables users to:
+- **Select a video** from their gallery to upload.
+- Note: A **trimming feature** is being developed to allow users to edit their videos before uploading.
+
 Once a video is uploaded, it:
-Appears in the user's profile.
-Appears in the home feed for others to see.
-4. Profile
-The profile page displays:
-The user's uploaded videos.
-A views counter for each video.
+1. **Appears in the user's profile**.
+2. **Shows up in the home feed**, allowing others to view it.
+
+---
+
+### **Profile**
+The **Profile Page** showcases:
+- The user's **uploaded videos**.
+- A **views counter** for each video.
+
 Users can:
-Edit their profile by holding on specific areas:
-Change username.
-Update their full name.
-Add or update a description.
-Set or update their profile picture.
-Watch videos in full screen directly from their profile.
-Sign out: Log out of the app and return to the welcome page.
-How to Use
-Sign Up or Log In on the welcome page.
-Explore videos on the home page.
-Upload your own videos through the upload page.
-Manage your profile and enjoy the app's features!
-We hope you enjoy using The Motion Hub! 🎥✨
+1. **Edit their profile** by holding on specific areas:
+   - Change their **username**.
+   - Update their **full name**.
+   - Add or update a **description**.
+   - Set or update their **profile picture**.
+2. **Watch videos in full-screen mode** directly from their profile.
+3. **Sign Out**:
+   - Log out of the app.
+   - Redirect to the **Welcome Page**.
+
+---
+
+## How to Use
+1. **Sign Up** or **Log In** on the welcome page.
+2. **Explore videos** on the home page.
+3. **Upload your own videos** through the upload page.
+4. **Manage your profile** and enjoy all the features The Motion Hub has to offer!
+
+---
+
+We hope you enjoy using **The Motion Hub**! 🎥✨
