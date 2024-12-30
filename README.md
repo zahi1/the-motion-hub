@@ -57,7 +57,7 @@ Users can:
 4. **Manage your profile** and enjoy all the features The Motion Hub has to offer!
 
 ---
-Video Showcasing the app:
+## Video Showcasing The Motion Hub app:
 
 https://github.com/user-attachments/assets/79283807-c39f-4a5a-967b-ea20b40e8f6d
 
