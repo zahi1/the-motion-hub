@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'pages/login_page.dart';
 import 'pages/main_page.dart';
-import 'pages/profile_page.dart'; // Include the ProfilePage
+import 'pages/profile_page.dart'; 
 import 'providers/user_provider.dart';
 
 void main() {
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'The Motion Hub',
         theme: ThemeData(
-          brightness: Brightness.dark, // Use dark mode
+          brightness: Brightness.dark, // Used dark mode in heree
           colorScheme: ColorScheme.fromSwatch(
             primarySwatch: Colors.deepPurple,
             brightness: Brightness.dark,
@@ -44,7 +44,6 @@ class MyApp extends StatelessWidget {
           '/login': (context) => const LoginPage(), // LoginPage route
           '/main': (context) => const MainPage(),   // MainPage route
           '/profile': (context) => const ProfilePage(), // ProfilePage route
-          // Add more routes as necessary
         },
       ),
     );
