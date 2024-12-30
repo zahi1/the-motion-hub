@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
-import 'package:flutter_email_sender/flutter_email_sender.dart'; // Add email sender plugin
 import 'dart:math'; // For random selection
 
 class VideoWidget extends StatefulWidget {
@@ -70,34 +69,14 @@ class _VideoWidgetState extends State<VideoWidget> {
     super.dispose();
   }
 
-  void _sendEmail(String email) async {
-    final emailToSend = Email(
-      body: 'Here is the video you wanted to share!',
-      subject: 'Shared Video',
-      recipients: [email],
-      isHTML: false,
-    );
-
-    try {
-      await FlutterEmailSender.send(emailToSend);
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Email draft created successfully!')),
-      );
-    } catch (error) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Failed to create email draft: $error')),
-      );
-    }
-  }
-
-  void _showEmailDialog() {
+  void _showShareDialog() {
     final emailController = TextEditingController();
 
     showDialog(
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: const Text('Share via Email'),
+          title: const Text('Share Video'),
           content: TextField(
             controller: emailController,
             decoration: const InputDecoration(hintText: 'Enter recipient email'),
@@ -111,10 +90,13 @@ class _VideoWidgetState extends State<VideoWidget> {
             ),
             TextButton(
               onPressed: () {
-                _sendEmail(emailController.text);
+                print('Video shared to: ${emailController.text}');
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text('Video shared with ${emailController.text}')),
+                );
                 Navigator.of(context).pop();
               },
-              child: const Text('Send'),
+              child: const Text('Share'),
             ),
           ],
         );
@@ -143,7 +125,6 @@ class _VideoWidgetState extends State<VideoWidget> {
             ),
             TextButton(
               onPressed: () {
-                // Handle the comment (e.g., save it or send it to a server)
                 print('Comment: ${commentController.text}');
                 Navigator.of(context).pop();
               },
@@ -172,11 +153,11 @@ class _VideoWidgetState extends State<VideoWidget> {
         ),
         Positioned(
           right: 16,
-          bottom: 80, // Adjusted position to look better
+          bottom: 80,
           child: Column(
             children: [
               IconButton(
-                iconSize: 28, // Smaller size for like button
+                iconSize: 28,
                 icon: Icon(
                   Icons.favorite,
                   color: isLiked ? Colors.red : Colors.white,
@@ -187,24 +168,24 @@ class _VideoWidgetState extends State<VideoWidget> {
                   });
                 },
               ),
-              const SizedBox(height: 12), // Smaller spacing
+              const SizedBox(height: 12),
               IconButton(
-                iconSize: 28, // Smaller size for comment button
+                iconSize: 28,
                 icon: const Icon(Icons.comment, color: Colors.white),
                 onPressed: _showCommentDialog,
               ),
-              const SizedBox(height: 12), // Smaller spacing
+              const SizedBox(height: 12),
               IconButton(
-                iconSize: 28, // Smaller size for share button
+                iconSize: 28,
                 icon: const Icon(Icons.share, color: Colors.white),
-                onPressed: _showEmailDialog,
+                onPressed: _showShareDialog,
               ),
             ],
           ),
         ),
         Positioned(
           left: 16,
-          bottom: 20, // Adjusted text position to look better
+          bottom: 20,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -213,7 +194,7 @@ class _VideoWidgetState extends State<VideoWidget> {
                 style: const TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
-                  fontSize: 14, // Reduced font size
+                  fontSize: 14,
                 ),
               ),
               const SizedBox(height: 4),
@@ -221,7 +202,7 @@ class _VideoWidgetState extends State<VideoWidget> {
                 randomCaption,
                 style: const TextStyle(
                   color: Colors.white,
-                  fontSize: 12, // Reduced font size
+                  fontSize: 12,
                 ),
               ),
             ],
