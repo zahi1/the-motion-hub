@@ -1,7 +1,7 @@
 class VideoModel {
   final String filePath;
   final String uploadedBy;
-  final bool isAsset; // Add this field to indicate if the video is an asset or user-uploaded
+  final bool isAsset; // Add this field to indicate if the video is an asset or user-uploadeded
 
   VideoModel({
     required this.filePath,
